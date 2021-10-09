@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 <title>Welcome</title>
 <body style="background-color: #fefbd8">
+
+<%@ include file="components/common_cs_js.jsp"%>
+<%@ include file="components/navbar.jsp"%>
+
+
+
+
+
+
 	<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase-auth.js"></script>
@@ -12,6 +22,8 @@
 	<script
 		src="https://www.gstatic.com/firebasejs/3.7.4/firebase-messaging.js"></script>
 	<style>
+
+
 body {
 	background-color: #fefbd8;
 }
@@ -96,7 +108,9 @@ div {
 			initApp()
 		});
 	</script>
+	
 </head>
+
 <body>
 	<center>
 		<h1>
@@ -106,10 +120,11 @@ div {
 	<div id="sign-in-status"></div>
 	<div id="sign-in"></div>
 	<div id="account-details"></div>
+	
 	<br>
 
 	<center>
-		<b><h2>↓ Enter Here If You Are New Here ↓</b>
+		<b><h2>Enter Here If You Are New Here</b>
 		</h2>
 	</center>
 
@@ -137,7 +152,7 @@ div {
 
 <td>
 
-<a href="Add-Wage.jsp"><span>Click Here To Add
+<a href="Add-Wageid.jsp"><span>Click Here To Add
 									id Or Create Unique id For Worker</span></a></td>
 					</tr>
 				</tbody>
@@ -149,7 +164,7 @@ div {
 <br>
 
 <center>
-	<b><h2>↓ Show My Added Products Or Items ↓</b>
+	<b><h2>Show My Added Products Or Items</b>
 	</h2>
 </center>
 
@@ -178,7 +193,7 @@ div {
 <br>
 
 <center>
-	<b><h2>↓ Add Products Direct Via Login ↓</b>
+	<b><h2>Add Products Direct Via Login</b>
 	</h2>
 </center>
 
