@@ -17,11 +17,14 @@ public class wageid {
 
 	}
 
-	public wageid(String userId) {
-		this.userId = userId;
-
+	
+	public String getwageid() {
+		return userId;
 	}
 
+	public void setwageid(String userId) {
+		this.userId = userId;
+	}
 	public Map<String, Object> toMap() {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("userId", userId);

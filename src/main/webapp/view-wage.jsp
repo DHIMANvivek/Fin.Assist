@@ -69,9 +69,9 @@ div.ex4 {
 <body>
 
 	<%
-	UserId user = (UserId) session.getAttribute("keyUser");
+	wageid user2 = (wageid) session.getAttribute("keyUser1");
 	Wages product = new Wages();
-	user._id = product.itemId;
+	user2._id = product.name;
 	DataBase db = new DataBase();
 	%>
 
@@ -95,9 +95,9 @@ div.ex4 {
 				<thead>
 					<tr>
 						<th>Date Time</th>
-						<th>items</th>
-						<th>Quantity</th>
-						<th>Price</th>
+						<th>Name</th>
+						<th>Day Worked</th>
+						<th>Income</th>
 						<th>Action</th>
 					</tr>
 				</thead>
@@ -105,20 +105,20 @@ div.ex4 {
 					</div>
 
 					<%
-					ArrayList<Wages> prod = db.fetchProducts1(user.userId);
-					user._id = product.itemId;
-					for (Wages pro : prod) {
+					ArrayList<Wages> prode = db.fetchProducts1(user2.userId);
+					user2._id = product.name;
+					for (Wages pro1 : prode) {
 					%>
 
 					<tr>
 
-						<td class="ex2"><%=pro.dateTimeStamp%></td>
-						<td class="ex2"><%=pro.items=user._id%></td>
-						<td class="ex2"><%=pro.quantity%></td>
-						<td class="ex2"><%=pro.price%></td>
+						<td class="ex2"><%=pro1.dateTimeStamp%></td>
+						<td class="ex2"><%=pro1.name%></td>
+						<td class="ex2"><%=pro1.daysWorked%></td>
+						<td class="ex2"><%=pro1.income%></td>
 						<td class="ex2"><a
-							href='action.jsp?action=update&userids=<%=pro._id%>&fever=<%=pro.items%>'>UPDATE</a>
-							<a href='action.jsp?action=delete&userids=<%=pro._id%>'>DELETE</a></td>
+							href='action1.jsp?action=update&userids=<%=pro1._id%>&fever=<%=pro1.name%>'>UPDATE</a>
+							<a href='action1.jsp?action=delete&userids=<%=pro1._id%>'>DELETE</a></td>
 
 					</tr>
 

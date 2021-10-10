@@ -1,8 +1,11 @@
+<%@page import="com.FinAssist.Model.Wages"%>
+<%@page import="com.FinAssist.Model.wageid"%>
 <%@page import="com.FinAssist.Dao.DataBase"%>
 <%@page import="com.FinAssist.Model.Products"%>
 <%@page import="com.FinAssist.Model.UserId"%>
 <%@ include file="components/common_cs_js.jsp"%>
-<%@ include file="components/navbar.jsp"%>
+
+
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -13,7 +16,7 @@
 
 
 <%
-	UserId user2 = (UserId) session.getAttribute("keyUser");
+	wageid user2 = (wageid) session.getAttribute("keyUser1");
 	%>
 
 
@@ -37,6 +40,8 @@ div {
 }
 </style>
 <body>
+
+
 	<br>
 	<br>
 
@@ -100,19 +105,19 @@ div {
 			<div class="form-group">
 				<label for="item">Name Of Worker</label> 
 				<br><input type="text"
-					 placeholder=<%=user2.userId%> id="email"
+					 placeholder=<%=user2.userId%> id="name"
 					name="txtItem">
 			</div>
 			<div class="form-group">
 				<label for="number">Days Worked</label> 
 				<br><input type="number"
-					 placeholder="Enter Days" id="Quantity"
+					 placeholder="Enter Days" id="daysWorked"
 					name="txtQuantity">
 			</div>
 			<div class="form-group">
 				<label for="number">Enter Income</label> 
 				<br><input type="number" 
-					 placeholder="Enter Income" id="Price"
+					 placeholder="Enter Income" id="income"
 					name="txtPrice">
 			</div>
 
@@ -135,6 +140,7 @@ div {
 		</table>
 
 	</center>
+
 <center><%@ include file="components/calculator.html"%></center>
 </body>
 </html>

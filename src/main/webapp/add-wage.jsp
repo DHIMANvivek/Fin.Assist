@@ -1,3 +1,4 @@
+<%@page import="com.FinAssist.Model.wageid"%>
 <%@page import="com.FinAssist.Model.Wages"%>
 <%@page import="com.FinAssist.Dao.DataBase"%>
 <%@page import="com.FinAssist.Model.Products"%>
@@ -32,7 +33,7 @@ div {
 
 
 	<%
-	UserId user = (UserId) session.getAttribute("keyUser");
+	wageid user = (wageid) session.getAttribute("keyUser1");
 	%>
 
 	<center>
@@ -42,11 +43,12 @@ div {
 
 		<%
 		Wages product = new Wages();
-		product.itemId = user.userId;
+		product.name = user.userId;
+		
 
-		product.items = request.getParameter("txtItem");
-		product.quantity = request.getParameter("txtQuantity");
-		product.price = request.getParameter("txtPrice");
+		product.name = request.getParameter("txtItem");
+		product.daysWorked = request.getParameter("txtQuantity");
+		product.income = request.getParameter("txtPrice");
 
 		DataBase db = new DataBase();
 		db.logFever1(product);
@@ -54,7 +56,7 @@ div {
 
 		<p>
 			Your Item has been Saved In Database In Id :
-			<%=product.itemId%></p>
+			<%=user.userId%></p>
 		<br>
 		<br>
 		<br> <a href="view-wage.jsp"><p style="color: red;">

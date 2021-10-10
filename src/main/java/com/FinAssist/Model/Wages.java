@@ -16,13 +16,55 @@ public class Wages {
 
 	}
 
-	public Wages(String _id, String income, String daysWorked, String items, String dateTimeStamp) {
+	public Wages(String _id, String income, String daysWorked, String items, String dateTimeStamp, String name) {
 		super();
 
 		this.income = income;
 		this.daysWorked = daysWorked;
 		this.name = name;
 	
+		this.dateTimeStamp = dateTimeStamp;
+	}
+	
+	
+
+	public String get_id() {
+		return _id;
+	}
+
+	public void set_id(String _id) {
+		this._id = _id;
+	}
+
+	public String getIncome() {
+		return income;
+	}
+
+	public void setIncome(String income) {
+		this.income = income;
+	}
+
+	public String getDaysWorked() {
+		return daysWorked;
+	}
+
+	public void setDaysWorked(String daysWorked) {
+		this.daysWorked = daysWorked;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDateTimeStamp() {
+		return dateTimeStamp;
+	}
+
+	public void setDateTimeStamp(String dateTimeStamp) {
 		this.dateTimeStamp = dateTimeStamp;
 	}
 

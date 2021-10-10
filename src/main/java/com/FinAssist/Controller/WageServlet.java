@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import com.FinAssist.Dao.DataBase;
 import com.FinAssist.Model.UserId;
+import com.FinAssist.Model.wageid;
 
 /**
  * Servlet implementation class WageServlet
@@ -33,7 +34,7 @@ public class WageServlet extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		UserId admin1 = new UserId();
+		wageid admin1 = new wageid();
 
 		admin1.userId = request.getParameter("txtuserid");
 
@@ -49,7 +50,7 @@ public class WageServlet extends HttpServlet {
 		String html = "";
 		if (true) {
 			HttpSession session = request.getSession();
-			session.setAttribute("keyUser", admin1);
+			session.setAttribute("keyUser1", admin1);
 
 			html = "<html><body  style=\"background-color: #fefbd8\"><center>THANK YOU " +"<br><br>Your ID Is Saved With Us</br></br>"+"<br><h3>Your ID:</h3></b>"+admin1.userId+ "<br><br><b><h2>Success</h2></b></br></br>"
 					+ "<a href='home1.jsp'><h1><b>Add Wages</b></h1></a>" + "<html><body><center>";

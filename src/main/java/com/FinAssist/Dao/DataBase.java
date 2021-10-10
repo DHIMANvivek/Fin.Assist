@@ -10,6 +10,7 @@ import org.bson.types.ObjectId;
 import com.FinAssist.Model.Products;
 import com.FinAssist.Model.UserId;
 import com.FinAssist.Model.Wages;
+import com.FinAssist.Model.wageid;
 import com.mongodb.BasicDBObject;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
@@ -82,11 +83,11 @@ public class DataBase {
 
 		return true;
 	}
-	public void fetch1(UserId userId) {
+	public void fetch1(wageid admin1) {
 
 		try {
 
-			Document document = new Document(userId.toMap());
+			Document document = new Document(admin1.toMap());
 
 			mongoClient.getDatabase("WagesAssistant").getCollection("wageid").insertOne(document);
 			System.out.println("Document Inserted :)");
@@ -139,7 +140,7 @@ public class DataBase {
 		try {
 
 			BasicDBObject query = new BasicDBObject();
-			query.put("itemId", userId);
+			query.put("name", userId);
 
 			MongoCursor<Document> cursor = mongoClient.getDatabase("WagesAssistant").getCollection("wageDetail").find(query)
 					.iterator();
@@ -151,9 +152,9 @@ public class DataBase {
 				product._id = document.getObjectId("_id").toString();
 				//product.itemId = document.getString("itemId");
 				product.dateTimeStamp = document.getDate("dateTimeStamp").toString();
-				product.daysWorked = document.getString("quantity");
-				product.name = document.getString("items");
-				product.income = document.getString("price");
+				product.daysWorked = document.getString("daysWorked");
+				product.name = document.getString("name");
+				product.income = document.getString("income");
 				productRecords.add(product);
 
 			}
@@ -179,8 +180,22 @@ public class DataBase {
 
 	}
 
+	
+	public void deleteForever1(String userId) {
+
+		System.out.println("[DB] Deleting Product:" + userId);
+
+		BasicDBObject query = new BasicDBObject();
+
+		query.put("_id", new ObjectId(userId));
+
+		// Fetching the Data
+		mongoClient.getDatabase("WagesAssistant").getCollection("wageid").deleteOne(query);
+
+	}
+
 	public void updateProducts(String itemname, String itemId) {
-		// MongoDB Document which converts HashMap to Document | BOXING
+		
 
 		System.out.println("[DB] Updating item  " + itemId);
 
