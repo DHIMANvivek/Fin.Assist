@@ -187,31 +187,7 @@ div {
 <br>
 <br>
 
-<center>
-	<b><h2>Add Products Direct Via Login</b>
-	</h2>
-</center>
 
-<center>
-	<body>
-		<table border="5" width="500">
-			<thead align="center">
-				<tr>
-					<th><h3>Save Your Data Safe With Us</h3></th>
-
-				</tr>
-			</thead>
-
-			<tbody align="center">
-				<tr>
-					<td><a href="login.jsp"><span>Direct Login To Add
-								Products</span></a></td>
-
-				</tr>
-			</tbody>
-		</table>
-	</body>
-</center>
 </body>
 </html>
 <br>

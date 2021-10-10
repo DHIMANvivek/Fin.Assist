@@ -114,7 +114,7 @@ div.ex4 {
 						<td class="ex2"><%=pro.items%></td>
 						<td class="ex2"><%=pro.quantity%></td>
 						<td class="ex2"><%=pro.price%></td>
-href='action.jsp?action=update&userids=<%=pro._id%>&fever=<%=pro.items%>'>UPDATE</a>
+<a href='action.jsp?action=update&userids=<%=pro._id%>&fever=<%=pro.items%>'>UPDATE</a>
 							<a href='action.jsp?action=delete&userids=<%=pro._id%>'>DELETE</a></td>
 
 
