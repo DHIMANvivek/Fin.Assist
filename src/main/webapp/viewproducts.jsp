@@ -77,13 +77,13 @@ div.ex4 {
 
 	<div class="container">
 		<br>
-<center>
-    <input  id="myInput" type="text" placeholder="Search for Expenses...">
-	</center>
+		<center>
+			<input id="myInput" type="text" placeholder="Search for Expenses...">
+		</center>
 
 		<marquee>
-			<h2>Thankyou & Note : We Promise Not To Save Your Data In Our DataBase After You Deleted :)
-				:)</h2>
+			<h2>Thankyou & Note : We Promise Not To Save Your Data In Our
+				DataBase After You Deleted :) :)</h2>
 		</marquee>
 		<center>
 			<h2>Product Records</h2>
@@ -96,7 +96,7 @@ div.ex4 {
 						<th>items</th>
 						<th>Quantity</th>
 						<th>Price</th>
-						<th>Action</th>
+
 					</tr>
 				</thead>
 				<tbody id="myTable">
@@ -114,9 +114,9 @@ div.ex4 {
 						<td class="ex2"><%=pro.items%></td>
 						<td class="ex2"><%=pro.quantity%></td>
 						<td class="ex2"><%=pro.price%></td>
-						<td class="ex2"><a
-							href='action.jsp?action=update&userids=<%=pro._id%>&fever=<%=pro.items%>'>UPDATE</a>
+href='action.jsp?action=update&userids=<%=pro._id%>&fever=<%=pro.items%>'>UPDATE</a>
 							<a href='action.jsp?action=delete&userids=<%=pro._id%>'>DELETE</a></td>
+
 
 					</tr>
 
@@ -128,14 +128,29 @@ div.ex4 {
 			</table>
 		</div>
 		<script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script>
+			$(document)
+					.ready(
+							function() {
+								$("#myInput")
+										.on(
+												"keyup",
+												function() {
+													var value = $(this).val()
+															.toLowerCase();
+													$("#myTable tr")
+															.filter(
+																	function() {
+																		$(this)
+																				.toggle(
+																						$(
+																								this)
+																								.text()
+																								.toLowerCase()
+																								.indexOf(
+																										value) > -1)
+																	});
+												});
+							});
+		</script>
 </body>
 </html>

@@ -44,7 +44,6 @@ div {
 		<%
 		Wages product = new Wages();
 		product.name = user.userId;
-		
 
 		product.name = request.getParameter("txtItem");
 		product.daysWorked = request.getParameter("txtQuantity");
@@ -57,9 +56,8 @@ div {
 		<p>
 			Your Item has been Saved In Database In Id :
 			<%=user.userId%></p>
-		<br>
-		<br>
-		<br> <a href="view-wage.jsp"><p style="color: red;">
+		<br> <br> <br> <a href="view-wage.jsp"><p
+				style="color: red;">
 			<h3>
 				"View All Saved Data".
 				</p>

@@ -1,6 +1,6 @@
 <%@page import="com.FinAssist.Dao.DataBase"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,18 +11,20 @@
 
 	<center>
 
-	<%
-		String itemname = request.getParameter("txtproducts") ;
+		<%
+		String itemname = request.getParameter("txtproducts");
 		String productId = request.getParameter("txtid");
-	
-	 	DataBase db = new DataBase();
+
+		DataBase db = new DataBase();
 		db.updateProducts(itemname, productId);
-	
-	%>
-	
-	<h3>Product Updated</h3><br>
-	<h3><a href='viewproducts.jsp'>View all Product RECORDS</a></h3> 
-	
+		%>
+
+		<h3>Product Updated</h3>
+		<br>
+		<h3>
+			<a href='viewproducts.jsp'>View all Product RECORDS</a>
+		</h3>
+
 	</center>
 
 

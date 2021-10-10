@@ -30,8 +30,8 @@
 
 					<div class="input-group mb-1">
 						<input type="text" class="form-control" id="Price"
-							name="txtuserid" placeholder="eg: john"
-							aria-label="eg: john" aria-describedby="basic-addon2">
+							name="txtuserid" placeholder="eg: john" aria-label="eg: john"
+							aria-describedby="basic-addon2">
 						<div class="input-group-append">
 							<button class="btn btn-outline-secondary" type="submit">Submit</button>
 						</div>

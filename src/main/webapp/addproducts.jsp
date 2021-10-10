@@ -54,9 +54,8 @@ div {
 		<p>
 			Your Item has been Saved In Database In Id :
 			<%=product.itemId%></p>
-		<br>
-		<br>
-		<br> <a href="viewproducts.jsp"><p style="color: red;">
+		<br> <br> <br> <a href="viewproducts.jsp"><p
+				style="color: red;">
 			<h3>
 				"View All Saved Items".
 				</p>

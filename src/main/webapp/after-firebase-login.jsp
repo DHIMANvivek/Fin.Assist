@@ -6,8 +6,8 @@
 <title>Welcome</title>
 <body style="background-color: #fefbd8">
 
-<%@ include file="components/common_cs_js.jsp"%>
-<%@ include file="components/navbar.jsp"%>
+	<%@ include file="components/common_cs_js.jsp"%>
+	<%@ include file="components/navbar.jsp"%>
 
 
 
@@ -22,8 +22,6 @@
 	<script
 		src="https://www.gstatic.com/firebasejs/3.7.4/firebase-messaging.js"></script>
 	<style>
-
-
 body {
 	background-color: #fefbd8;
 }
@@ -43,14 +41,14 @@ div {
 	<script>
 		// Initialize Firebase
 		var config = {
-				apiKey : "AIzaSyDtTezk2E4q1O2pRrQdYfFWXNJNbj0X_CY",
-				authDomain : "finassist-4f0a4.firebaseapp.com",
-				databaseURL : "",
-				projectId : "finassist-4f0a4",
+			apiKey : "AIzaSyDtTezk2E4q1O2pRrQdYfFWXNJNbj0X_CY",
+			authDomain : "finassist-4f0a4.firebaseapp.com",
+			databaseURL : "",
+			projectId : "finassist-4f0a4",
 
-				storageBucket : "finassist-4f0a4.appspot.com",
-				messagingSenderId : "726862204046",
-				appId : "1:726862204046:web:c69877e75dd8c408ac4ddf"
+			storageBucket : "finassist-4f0a4.appspot.com",
+			messagingSenderId : "726862204046",
+			appId : "1:726862204046:web:c69877e75dd8c408ac4ddf"
 		};
 		firebase.initializeApp(config);
 	</script>
@@ -108,7 +106,6 @@ div {
 			initApp()
 		});
 	</script>
-	
 </head>
 
 <body>
@@ -120,7 +117,7 @@ div {
 	<div id="sign-in-status"></div>
 	<div id="sign-in"></div>
 	<div id="account-details"></div>
-	
+
 	<br>
 
 	<center>
@@ -138,22 +135,20 @@ div {
 					</tr>
 				</thead>
 				<br>
-				
+
 
 				<tbody align="center">
 					<tr>
-						<td><a href="Id-Of-Products.jsp"><span>Click Here To Add
-									id Or Create Unique id For Products</span></a></td>
-<br>
-<tr>
+						<td><a href="Id-Of-Products.jsp"><span>Click Here
+									To Add id Or Create Unique id For Products</span></a></td>
+						<br>
+					<tr>
 						<th><h3>Save Your Workers Wages Safe With Us</h3></th>
 
 					</tr>
 
-<td>
-
-<a href="Add-Wageid.jsp"><span>Click Here To Add
-									id Or Create Unique id For Worker</span></a></td>
+					<td><a href="Add-Wageid.jsp"><span>Click Here To
+								Add id Or Create Unique id For Worker</span></a></td>
 					</tr>
 				</tbody>
 			</table>
@@ -180,8 +175,8 @@ div {
 
 			<tbody align="center">
 				<tr>
-					<td><a
-						href="viewproducts.jsp"><span>Show All Products</span></a></td>
+					<td><a href="viewproducts.jsp"><span>Show All
+								Products</span></a></td>
 
 				</tr>
 			</tbody>
@@ -209,7 +204,8 @@ div {
 
 			<tbody align="center">
 				<tr>
-					<td><a href="login.jsp"><span>Direct Login To Add Products</span></a></td>
+					<td><a href="login.jsp"><span>Direct Login To Add
+								Products</span></a></td>
 
 				</tr>
 			</tbody>

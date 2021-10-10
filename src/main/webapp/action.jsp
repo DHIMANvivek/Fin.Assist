@@ -14,31 +14,30 @@
 
 		<%
 		DataBase db = new DataBase();
-	
+
 		String action = request.getParameter("action");
 		String userId = request.getParameter("userids");
 		String itemname = request.getParameter("fever");
 		String products = request.getParameter("products");
-		
-		if(action.equals("delete")){
+
+		if (action.equals("delete")) {
 			// delete the fever record
 			db.deleteForever(userId);
-			
-	%>
+		%>
 		<h3>Products Record Deleted</h3>
-		<%			
-		}else{
-			
-	%>
+		<%
+		} else {
+		%>
 		<h3>UPDATE PRODUCT</h3>
 		<form action="update.jsp" method="get">
 			<input type="text" name="txtproducts" value="<%=itemname%>">
-			<input type="hidden" name="txtid" value="<%=userId%>">
-			<input type="submit" value="UPDATE PRODUCTS">
+			<input type="hidden" name="txtid" value="<%=userId%>"> <input
+				type="submit" value="UPDATE PRODUCTS">
 		</form>
-		<%			// update the fever record
+		<%
+		// update the fever record
 		}
-	%>
+		%>
 	</center>
 
 </body>

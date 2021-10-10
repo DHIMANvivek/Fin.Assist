@@ -134,8 +134,8 @@ div {
 							that allows you to save and retrieve tangible goods,wages
 							services online by adding it manually. <br> <br>
 							Development of this web application is still under construction
-							but we promise to make it more advance. <BR>
-						<BR> <b>-VIVEK DHIMAN</b>
+							but we promise to make it more advance. <BR> <BR> <b>-VIVEK
+								DHIMAN</b>
 						</b>
 					</p>
 				</div>
